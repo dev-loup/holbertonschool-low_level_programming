@@ -1,0 +1,7 @@
+ ignores emacs tempo files
+
+*~
+**/*~# ignores emacs tempo files
+
+*~
+**/*~
