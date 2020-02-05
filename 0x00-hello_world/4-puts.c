@@ -1,11 +1,12 @@
 #include <stdio.h>
+
 /**
- * Cool puts- my first message
- *
- * return (0) the ley for succeding
- */
-int main(void)
+* main - Entry point
+*
+* return: Always 0 (success)
+*/
+main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
- return (0);
+return (0);
 }
