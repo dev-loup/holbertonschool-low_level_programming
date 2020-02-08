@@ -19,15 +19,16 @@ for (a = 1; a < 100 ; a++)
 	putchar(' ');
 	putchar((a / 10) + '0');
 	putchar((a % 10) + '0');
-	putchar(',');
-	putchar(' ');
+	if(i < 98)
+	{
+		putchar(',');
+		putchar(' ');
+	}
 	if (a == 99)
 	{
 		i++;
-		a = i + 1;
-	}
-	if (i == 98)
 		a = i;
+	}
 }
 putchar('\n');
 return (0);
