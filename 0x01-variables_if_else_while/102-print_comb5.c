@@ -21,7 +21,7 @@ for (a = 1; a < 100 ; a++)
 	putchar((a % 10) + '0');
 	putchar(',');
 	putchar(' ');
-	if ( a == 99)
+	if (a == 99)
 	{
 		i++;
 		a = i + 1;
