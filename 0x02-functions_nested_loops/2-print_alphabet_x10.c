@@ -1,17 +1,23 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_alphabet_x10 - prints the alphabet ten times
  *
- * Return: Always 0.
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
- void print_alphabet_x10(void)
+void print_alphabet_x10(void)
 {
-	int a;
 	char c;
-	for(a = 1; a <= 10; a++)
-	{
-		for(c = 'a'; c <= 'z'; c++)
-			_putchar(c);
+	int n = 1;
 
+	for (n = 1; n <= 10; n++)
+	{
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		_putchar(c);
+	}
+	_putchar('\n');
+	}
 }
