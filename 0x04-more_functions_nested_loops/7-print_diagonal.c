@@ -9,14 +9,14 @@
  */
 void print_diagonal(int n)
 {
-	int hor;
-	int aba;
+	int h;
+	int a;
 
 	if (n <= 0)
 		_putchar('\n');
-	for (aba = 0; aba <= n; aba++)
+	for (a = 1; a <= n; a++)
 	{
-		for (hor = 0; hor < aba; hor++)
+		for (h = 1; h < a; h++)
 		{
 			_putchar(' ');
 		}
