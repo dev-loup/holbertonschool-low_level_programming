@@ -14,9 +14,9 @@ int main(void)
 	for (a = 1; a <= 100; a++)
 	{
 		((a % 3) == 0) ?
-		  (((a % 5) == 0) ? (printf("FizzBuzz ")) : (printf("Fizz "))) :
-		  (((a % 5) == 0) ? (printf("Buzz ")) : (printf("%i ", a)));
-
+		  (((a % 5) == 0) ? (printf("FizzBuzz")) : (printf("Fizz"))) :
+		  (((a % 5) == 0) ? (printf("Buzz")) : (printf("%i", a)));
+		(a < 100) ? (putchar(' ')) : (putchar('\n');
 	}
 	putchar('\n');
 
