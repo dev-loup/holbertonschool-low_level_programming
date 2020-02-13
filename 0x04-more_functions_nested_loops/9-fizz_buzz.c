@@ -18,5 +18,7 @@ int main(void)
 		  (((a % 5) == 0) ? (printf("Buzz ")) : (printf("%i ", a)));
 
 	}
+	putchar('\n');
+
 	return (0);
 }
