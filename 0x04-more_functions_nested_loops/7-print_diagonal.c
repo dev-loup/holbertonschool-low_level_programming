@@ -11,7 +11,8 @@ void print_diagonal(int n)
 {
 	int hor;
 	int aba;
-	if ( n <= 0)
+
+	if (n <= 0)
 		_putchar('\n');
 	for (aba = 0; aba <= n; aba++)
 	{
