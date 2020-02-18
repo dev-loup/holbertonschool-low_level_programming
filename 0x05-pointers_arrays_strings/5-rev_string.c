@@ -10,7 +10,7 @@ void rev_string(char *s)
 {
 	int counter;
 	char memo[100];
-	int index =0;
+	int index = 0;
 
 	for (counter = 0; s[counter] != '\0'; counter++)
 	{
@@ -19,7 +19,7 @@ void rev_string(char *s)
 
 	counter--;
 
-	for (; counter >= 0;counter--)
+	for (; counter >= 0; counter--)
 	{
 		*(s + index) = *(memo + counter);
 		index++;
