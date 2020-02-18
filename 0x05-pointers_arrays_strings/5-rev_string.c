@@ -24,4 +24,5 @@ void rev_string(char *s)
 		*(s + index) = *(memo + counter);
 		index++;
 	}
+	counter++;
 }
