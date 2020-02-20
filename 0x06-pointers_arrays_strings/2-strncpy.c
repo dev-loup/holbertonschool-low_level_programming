@@ -18,7 +18,6 @@ char *_strncpy(char *dest, char *src, int n)
 	}
 	if (*(src + index) == '\0')
 	{
-		index++;
 		*(dest + index) = '\0';
 	}
 
