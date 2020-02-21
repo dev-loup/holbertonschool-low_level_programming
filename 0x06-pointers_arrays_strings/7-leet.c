@@ -16,8 +16,10 @@ char *leet(char *a)
 	for (index = 0; *(a + index) != '\0'; index++)
 	{
 		for (incheck = 0; *(leet + incheck) != '\0'; incheck++)
+		{
 			if (*(a + index) == *(leet + incheck))
 				*(a + index) = *(comp + incheck);
+		}
 	}
 	return (a);
 }
