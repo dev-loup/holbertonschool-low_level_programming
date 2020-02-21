@@ -18,7 +18,10 @@ char *rot13(char *a)
 		for (incheck = 0; *(leet + incheck) != '\0'; incheck++)
 		{
 			if (*(a + index) == *(leet + incheck))
+			{
 				*(a + index) = *(comp + incheck);
+				break;
+			}
 		}
 	}
 	return (a);
