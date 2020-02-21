@@ -24,7 +24,8 @@ char *cap_string(char *a)
 		    (*(a + (index - 1)) == '(') ||
 		    (*(a + (index - 1)) == ')') ||
 		    (*(a + (index - 1)) == '{') ||
-		    (*(a + (index - 1)) == '}'))
+		    (*(a + (index - 1)) == '}') ||
+		    (*(a + (index - 1)) == '\0'))
 			if (*(a + index) >= 'a' && *(a + index) <= 'z')
 			{
 				*(a + index) = (*(a + index) - ' ');
