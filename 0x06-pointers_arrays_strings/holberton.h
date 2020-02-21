@@ -1,4 +1,4 @@
-B#ifndef HOLBERTON_H
+#ifndef HOLBERTON_H
 #define HOLBERTON_H
 
 void reverse_array(int *a, int n);
