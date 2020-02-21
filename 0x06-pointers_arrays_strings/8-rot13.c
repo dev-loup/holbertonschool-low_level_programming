@@ -10,8 +10,8 @@ char *rot13(char *a)
 {
 	int index;
 	int incheck;
-	char comp[] = "NnOoPpQqRrSsTtUuVvXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
-	char leet[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZz";
+	char comp[] = "NnOoPpQqRrSsTtUuVvWwXxYyZzAaBbCcDdEeFfGgHhIiJjKkLlMm";
+	char leet[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
 	for (index = 0; *(a + index) != '\0'; index++)
 	{
