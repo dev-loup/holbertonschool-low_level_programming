@@ -16,6 +16,8 @@ void print_number(int n)
 		integer = -integer;
 	}
 	if ((integer / 10) > 0)
+	{
 		print_number(integer / 10);
-	_putchar((integer % 10 + 48);
+	}
+	_putchar((integer % 10) + 48);
 }
