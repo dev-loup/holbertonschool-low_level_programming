@@ -12,6 +12,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	int index2;
 	int counter;
+	int checker;
 
 	counter = 0;
 
@@ -27,5 +28,8 @@ char *_strstr(char *haystack, char *needle)
 			counter = 0;
 
 	}
-	return (0);
+	if (haystack[index2] == '\0')
+		return (0);
+	else
+		return (haystack);
 }
