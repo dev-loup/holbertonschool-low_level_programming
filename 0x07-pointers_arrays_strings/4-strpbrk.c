@@ -7,7 +7,7 @@
  *
  * Return: Returns null if there is no sequence
  */
-unsigned int _strpbrk(char *s, char *accept)
+char _strpbrk(char *s, char *accept)
 {
 	int index, index2, cutter;
 
