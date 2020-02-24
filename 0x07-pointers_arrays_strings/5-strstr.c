@@ -12,7 +12,6 @@ char *_strstr(char *haystack, char *needle)
 {
 	int index2;
 	int counter;
-	int checker;
 
 	counter = 0;
 
