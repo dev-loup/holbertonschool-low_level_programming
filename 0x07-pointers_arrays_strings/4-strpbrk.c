@@ -18,11 +18,12 @@ char *_strpbrk(char *s, char *accept)
 		{
 			if (s[index] == accept[index2])
 			{
-				return (&s[index]);
 				cutter += 1;
+				return (&s[index]);
 			}
 		}
 	}
 	if (cutter > 0)
 		return (0);
+	return (0);
 }
