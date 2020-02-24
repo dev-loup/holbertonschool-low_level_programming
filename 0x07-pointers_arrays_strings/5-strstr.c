@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * _strstr - returns the first substring coincidence.
@@ -28,7 +29,7 @@ char *_strstr(char *haystack, char *needle)
 
 	}
 	if (haystack[index2] == '\0')
-		return (0);
+		return (NULL);
 	else
 		return (haystack);
 }
