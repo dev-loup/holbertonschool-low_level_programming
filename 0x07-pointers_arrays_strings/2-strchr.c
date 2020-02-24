@@ -11,14 +11,10 @@ char *_strchr(char *s, char c)
 {
 	int index;
 
-	for (index = 0; *(s + index) != c; index++)
+	for (index = 0; *(s + index) != '\0'; index++)
 	{
-		if (*(s + index) == (c + 0))
-		{
-			
-		}
-		else
-			(taker + 0) = *(s + index);
+		if (*(s + index) == c)
+			break;
 	}
-	return (taker);
+	return (&s[index]);
 }
