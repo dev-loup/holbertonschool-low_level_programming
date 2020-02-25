@@ -14,13 +14,10 @@ void print_chessboard(char (*a)[8])
 
 	for (hor = 0; hor != 8; hor++)
 	{
-		_putchar(a[ver][hor]);
-		if (hor == 7 && ver < 7)
+		for (ver = 0; ver != 8; ver++)
 		{
-			hor = 0;
-			ver++;
-			_putchar('\n');
+			_putchar(a[hor][ver]);
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
