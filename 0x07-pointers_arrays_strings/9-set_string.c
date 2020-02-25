@@ -3,9 +3,9 @@
 
 /**
  * set_string - set the value of a pointer to a char
- * @s:
- * @size: the size of the square
- * Return: Always 0.
+ * @s: char to edit
+ * @to: the value to take
+ * Return: no returns
  */
 void set_string(char **s, char *to)
 {
