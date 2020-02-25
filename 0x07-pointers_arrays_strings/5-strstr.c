@@ -9,27 +9,27 @@
  * Return: Always 0.
  */
 
+#include <stdio.h>
+
 char *_strstr(char *haystack, char *needle)
 {
 	int index2;
 	int counter;
 
-	counter = 0;
-
-	for (index2 = 0; haystack[index2] != '\0'; index2++)
+	if (needle[0] != '\0')
 	{
-		if (needle[counter] == haystack[index2])
+		counter = 0;
+		for (index2 = 0; haystack[index2] != '\0'; index2++)
 		{
-			if (needle[counter + 1] == '\0')
-				return (&haystack[index2 - counter]);
-			counter += 1;
+			if (needle[counter] == haystack[index2])
+			{
+				if (needle[counter + 1] == '\0')
+					return (&haystack[index2 - counter]);
+				counter += 1;
+			}
+			else
+				counter = 0;
 		}
-		else
-			counter = 0;
-
 	}
-	if (haystack[index2] == '\0')
-		return (NULL);
-	else
-		return (haystack);
+	return (NULL);
 }
