@@ -9,19 +9,14 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int diag1;
-	int diag2;
-	int index;
+	int i, sum1, sum2;
 
-	diag1 = 0;
-	diag2 = 0;
-	for (index = 0; index <= size; index++)
-	{
-		diag1 += a[index + (size * index)];
-	}
-	printf("%i, ", diag1);
-	for (index = 0; index <= size; index++)
-		diag2 += a[(size - 1) * index];
-	size--;
-	printf("%i\n", diag2);
+	sum1 = 0;
+	sum2 = 0;
+	for (i = 0; i < size * size; i += size + 1)
+		sum1 += a[i];
+	for (i = size - 1; i < size * size - 1; i += size - 1)
+		sum2 += a[i];
+	printf("%d, %d\n", sum1, sum2);
+
 }
