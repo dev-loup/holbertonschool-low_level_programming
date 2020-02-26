@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * _print_rev_recursion - prints inverse strings
- * @s: the string
- * Return: no returns
+ * factorial - gets factorial
+ * @n: the string
+ * Return: returns factorial value
  */
 
 int factorial(int n)
