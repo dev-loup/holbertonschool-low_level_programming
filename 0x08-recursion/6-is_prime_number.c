@@ -29,7 +29,7 @@ int is_prime_number(int n)
 {
 	int x;
 
-	x = (n - 1);
+	x = (n / 2);
 
 	x = (divisor_it(n, x));
 	return (x);
