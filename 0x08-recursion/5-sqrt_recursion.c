@@ -14,7 +14,7 @@ int _sqrt2(int n, int x)
 	else if ((x * x) == n)
 		return (x);
 	x++;
-	_sqrt2(n, x);
+	return (_sqrt2(n, x));
 }
 
 /**
