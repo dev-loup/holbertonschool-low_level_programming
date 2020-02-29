@@ -7,11 +7,11 @@
  *
  * Return: 0 on success
  */
-int main(int argc __attribute__((unused)), char *argv[]__attribute__((unused)))
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	int counter;
 
-	for(counter = 0; argv[counter] != '\0'; counter++)
-	printf("%s\n", argv[counter]);
+	for (counter = 0; argv[counter] != '\0'; counter++)
+		printf("%s\n", argv[counter]);
 	return (0);
 }
