@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int index = 0;
-	int saver = 0;
+	unsigned int saver = 0;
 	int symbol = 1;
 	int breaker = 0;
 
