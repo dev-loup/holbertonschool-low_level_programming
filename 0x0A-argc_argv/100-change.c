@@ -25,7 +25,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 	}
 	if (cash < 0)
 	{
-		printf("%d", exchange);
+		printf("%d\n", exchange);
 		return (0);
 	}
 	for (cnselector = 0; cnselector <= 5; cnselector++)
