@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "holberton.h"
 /**
- * main - prints the arguments
+ * main - counts the coins quantity from a cash value
  * @argc: counter to arguments input
  * @argv: string of arguments
  *
@@ -17,7 +16,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 
 	exchange = 0;
 	if (argv[2] == '\0')
-		cash = atoi(argv[1]);
+		cash = _atoi(argv[1]);
 	else
 	{
 		printf("Error\n");
