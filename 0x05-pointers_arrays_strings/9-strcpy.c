@@ -7,13 +7,13 @@
  *
  * Return: No returning
  */
-char _strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int counter;
 
-	for (counter = 0; s[counter] != '\0'; counter++)
+	for (counter = 0; src[counter] != '\0'; counter++)
 	{
 		*(dest + counter) = *(src + counter);
 	}
-	counter--;
+	return (dest);
 }
