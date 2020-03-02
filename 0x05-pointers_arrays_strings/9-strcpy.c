@@ -15,5 +15,11 @@ char *_strcpy(char *dest, char *src)
 	{
 		*(dest + counter) = *(src + counter);
 	}
+	counter--;
+	if (counter < 0)
+	{
+		*(dest + (counter + 1)) = '\0';
+		return (dest);
+	}
 	return (dest);
 }
