@@ -22,8 +22,8 @@ char *str_concat(char *s1, char *s2)
 	switcher = counter;
 	for (counter = 0; s2[counter] != '\0'; counter++)
 	{}
-	limiter += counter + 1;
-	arraycpy = malloc(limiter * sizeof(char));
+	limiter += counter;
+	arraycpy = malloc((limiter + 1) * sizeof(char));
 	if (arraycpy == NULL)
 		return (NULL);
 	for (counter = 0; counter < limiter; counter++)
@@ -33,5 +33,6 @@ char *str_concat(char *s1, char *s2)
 		else
 			*(arraycpy + counter) = *(s2 + (counter - switcher));
 	}
+	*(arraycpy + counter) = '\0';
 	return (arraycpy);
 }
