@@ -1,4 +1,4 @@
-B#include <stdlib.h>
+#include <stdlib.h>
 #include "holberton.h"
 
 /**
@@ -11,6 +11,7 @@ char *argstostr(int ac, char **av)
 {
 	char *arrcpy;
 	int counter;
+	int scounter;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -22,4 +23,5 @@ char *argstostr(int ac, char **av)
 			arrcpy[counter] = av[counter][scounter];
 		}
 	}
+	return (arrcpy);
 }
