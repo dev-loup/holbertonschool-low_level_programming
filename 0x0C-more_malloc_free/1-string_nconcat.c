@@ -17,7 +17,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (counter = 0; s1[counter] != '\0'; counter++)
 	{}
-	str_res = malloc((n + 1) + counter);
+	str_res = malloc(n + counter);
 	if (str_res == NULL)
 		return (NULL);
 	if (s1 == NULL)
@@ -43,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			str_res[switcher + counter] = s2[counter];
 		}
-		if (switcher != 0 && counter == n)
+		if (switcher != 0 && (counter == n || s2[counter] == '\0'))
 		{
 			str_res[switcher + counter] = '\0';
 			break;
