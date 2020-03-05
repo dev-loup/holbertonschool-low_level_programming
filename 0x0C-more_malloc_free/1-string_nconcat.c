@@ -45,7 +45,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		}
 		if (switcher != 0 && counter == n)
 		{
-			str_res[switcher + counter] ='\0';
+			str_res[switcher + counter] = '\0';
 			break;
 		}
 	}
