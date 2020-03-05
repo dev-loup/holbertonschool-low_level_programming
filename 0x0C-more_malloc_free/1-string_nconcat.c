@@ -15,9 +15,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int counter;
 	unsigned int switcher = NULL;
 
-	for (counter = 0; s1[counter] != '\0'; counter++)
+	for (counter = 0; s2[counter] != '\0'; counter++)
 	{}
-	str_res = malloc((n + 1) + counter);
+	for (switcher = 0; s1[switcher] != '\0'; switcher++)
+	{}
+	if (n < counter)
+		str_res = malloc((n + 1) + counter);
+	else
+		str_res = malloc(counter + switcher);
+	switcher = 0;
 	if (str_res == NULL)
 		return (NULL);
 	if (s1 == NULL)
