@@ -33,7 +33,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	for (upindex = 0; upindex < n; upindex++)
 	{
-		array[index + upindex] = s2[upindex];
+		array[index] = s2[upindex];
+		index++;
 	}
 	array[index + upindex] = '\0';
 	return (array);
