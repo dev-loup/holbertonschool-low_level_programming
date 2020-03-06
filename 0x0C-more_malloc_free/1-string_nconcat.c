@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	array = malloc((counter1 + n + 1) * sizeof(char));
 	if (array == NULL)
 		return (NULL);
-	for (index = 0; s1[index]; index++)
+	for (index = 0; s1[index] != '\0'; index++)
 	{
 		array[index] = s1[index];
 	}
