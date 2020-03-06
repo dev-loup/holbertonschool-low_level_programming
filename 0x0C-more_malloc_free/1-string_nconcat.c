@@ -11,40 +11,37 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *str_res;
-	unsigned int counter, switcher = NULL;
+	unsigned int counter, counter2, limiter, index;
+	char *array;
 
 	if (s1 == NULL)
 		s1 = "";
-	if (s2 == NULL)
+	else if (s2 == NULL)
 		s2 = "";
-	for (switcher = 0; s2[switcher] != '\0'; switcher++)
-	{}
 	for (counter = 0; s1[counter] != '\0'; counter++)
 	{}
-	if (n < switcher)
-		str_res = malloc((n + 1) + counter);
-	else
-		str_res = malloc((counter + 1) + switcher);
-	switcher = 0;
-	if (str_res == NULL)
-		return (NULL);
-	for (counter = 0; str_res; counter++)
+	for (counter2 = 0; s2[counter2] != '\0'; counter2++)
+	{}
+	if (counter2 < n)
 	{
-		if (s1[counter] != '\0' && switcher == 0)
-			str_res[counter] = s1[counter];
-		else if (switcher == 0)
+		limiter = (counter + counter2) + 1;
+		array = malloc(limiter * sizeof(char));
+	}
+	else
+	{
+		limiter = (counter + n) + 1;
+		array = malloc(limiter * sizeof(char));
+	}
+	for (index = 0; index <= limiter; index++)
+	{
+		if (index < counter)
 		{
-			switcher = counter;
-			counter = 0;
+			array[index] = s1[index];
 		}
-		if (switcher != 0 && counter < n)
-			str_res[switcher + counter] = s2[counter];
-		if (switcher != 0 && (counter == n || s2[counter] == '\0'))
+		else if (index < (limiter - 1) && index >= counter)
 		{
-			str_res[switcher + counter] = '\0';
-			break;
+			array[index] = s2[index - counter];
 		}
 	}
-	return (str_res);
+	return (array);
 }
