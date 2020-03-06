@@ -24,15 +24,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{}
 	if (counter2 < n)
 	{
-		limiter = (counter + counter2) + 1;
+		limiter = (counter + (counter2 + 1));
 		array = malloc(limiter * sizeof(char));
 	}
 	else
 	{
-		limiter = (counter + n) + 1;
+		limiter = (counter + (n + 1));
 		array = malloc(limiter * sizeof(char));
 	}
-	for (index = 0; index <= limiter; index++)
+	for (index = 0; index < limiter; index++)
 	{
 		if (index < counter)
 		{
@@ -42,6 +42,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		{
 			array[index] = s2[index - counter];
 		}
+		else
+			array[index] = '\0';
 	}
 	return (array);
 }
