@@ -1,6 +1,5 @@
 #ifndef DJANGO_H
 #define DJANGO_H
-
 /**
  * struct dog - Django ID data
  * @name: dog´s name
@@ -13,4 +12,5 @@ struct dog
 	float age;
 	char *owner;
 };
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
