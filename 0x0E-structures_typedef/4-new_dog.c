@@ -42,15 +42,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *pre_name;
 	char *fut_owner;
 
-  pre_name = _strdup(name);
+  	pre_name = _strdup(name);
 	fut_owner = _strdup(owner);
-	if (pre_name == NULL || !fut_owner == NULL)
+	if (pre_name == NULL || fut_owner == NULL)
 	{
 		free(pre_name);
 		free(fut_owner);
 		return (NULL);
 	}
-	dog_soul = malloc(sizeof(struct dog));
+	dog_soul = malloc(sizeof(dog_t));
 	if (dog_soul == NULL)
 	{
 		free(pre_name);
