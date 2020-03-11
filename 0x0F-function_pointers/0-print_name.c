@@ -7,6 +7,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name != 00 || f != 00)
+	if (!name || !f)
 		f(name);
 }
