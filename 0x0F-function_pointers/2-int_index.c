@@ -9,13 +9,11 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int counter;
+	int counter;
 
 	if (array && size > 0 && cmp)
 		for (counter = 0; counter < size; counter++)
-		{
 			if (cmp(array[counter]) != 0)
 				return (counter);
-		}
 	return (-1);
 }
