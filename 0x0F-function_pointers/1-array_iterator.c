@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "function_pointers.h"
 /**
  * array_iterator - iterates an array to send values.
@@ -10,7 +11,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int counter;
 
-	if (array[size] != 00)
-		for (counter = 0; counter <= size; counter++)
+	if (array[size])
+		for (counter = 0; counter < size; counter++)
 			action(array[counter]);
 }
