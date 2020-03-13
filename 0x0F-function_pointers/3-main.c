@@ -7,7 +7,7 @@
  * @argv: arguments to check
  * Return: Nothing.
  */
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
 	int num1, num2, check;
 

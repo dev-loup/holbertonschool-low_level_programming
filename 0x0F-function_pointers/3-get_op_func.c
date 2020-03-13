@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * get_op_func - choose the correct operation.
- * @name: received name to pass
+ *
  * @s: pointer to function
  * Return: NULL on failure op_func on success
  */
