@@ -18,7 +18,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (*s != *(ops[i].op) && i != 00)
+	while (*s != *(ops[i].op) && i < 5)
 		i++;
 	return (ops[i].f);
 }
