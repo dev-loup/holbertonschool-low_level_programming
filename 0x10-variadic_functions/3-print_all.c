@@ -59,9 +59,9 @@ void print_all(const char * const format, ...)
 	va_list ag;
 
 	va_start(ag, format);
-	while (format[j])
+	while (format[j] && format)
 	{
-		while (i < 4)
+		while (arr[i].fmt)
 		{
 			if (format[j] == arr[i].fmt[0])
 			{
