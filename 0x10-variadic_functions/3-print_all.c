@@ -24,7 +24,7 @@ void i_f(va_list ag)
  */
 void f_f(va_list ag)
 {
-	printf("%f", (float)va_arg(ag, double));
+	printf("%f", va_arg(ag, double));
 }
 
 /**
@@ -46,6 +46,11 @@ void s_f(va_list ag)
  */
 void print_all(const char * const format, ...)
 {
+	int i = 0;
+        int j = 0;
+        char *sep = "";
+        va_list ag;
+
 	form arr[] = {
 		{"c", c_f},
 		{"i", i_f},
@@ -53,10 +58,6 @@ void print_all(const char * const format, ...)
 		{"s", s_f},
 		{NULL, NULL}
 	};
-	int i = 0;
-	int j = 0;
-	char *sep = "";
-	va_list ag;
 
 	va_start(ag, format);
 	while (format[i] && format)
