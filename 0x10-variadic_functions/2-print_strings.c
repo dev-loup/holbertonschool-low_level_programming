@@ -13,8 +13,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int counter;
 	char *sequence;
 
-	if (separator == NULL)
-		separator = "";
 	va_start(string, n);
 	for (counter = 0; counter < n; counter++)
 	{
@@ -23,7 +21,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(Nil)");
 		else
 			printf("%s", sequence);
-	if (counter < n - 1)
+	if (counter < n - 1 && separator)
 		printf("%s", separator);
 	else
 		printf("\n");
