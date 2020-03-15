@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 	va_start(ag, format);
 	while (format[j] && format)
 	{
-		while (arr[i].fmt)
+		while (format[j])
 		{
 			if (format[j] == arr[i].fmt[0])
 			{
@@ -69,10 +69,9 @@ void print_all(const char * const format, ...)
 				arr[i].f(ag);
 				sep = ", ";
 			}
-			i++;
+			j++;
 		}
-		j++;
-		i = 0;
+		i++;
 	}
 	printf("\n");
 	va_end(ag);
