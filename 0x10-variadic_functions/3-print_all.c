@@ -2,69 +2,73 @@
 
 /**
  * c_f - function to print chars
- * @ag: va_list macro arguments
+ *
+ * @lis: va_list
  */
-void c_f(va_list ag)
+void c_f(va_list lis)
 {
-	printf("%c", va_arg(ag, int));
+	printf("%c", va_arg(lis, int));
 }
-
 /**
  * i_f - function to print integers
- * @ag: va_list macro arguments
+ *
+ * @lis: va_list
  */
-void i_f(va_list ag)
+void i_f(va_list lis)
 {
-	printf("%i", va_arg(ag, int));
+	printf("%d", va_arg(lis, int));
 }
-
 /**
  * f_f - function to print floats
- * @ag:  va_list macro arguments
+ *
+ * @lis:  va_list
  */
-void f_f(va_list ag)
+void f_f(va_list lis)
 {
-	printf("%f", va_arg(ag, double));
+	printf("%f", va_arg(lis, double));
 }
-
 /**
  * s_f - function to print strings
- * @ag: va_list macro arguments
+ *
+ * @lis: va_list
  */
-void s_f(va_list ag)
+void s_f(va_list lis)
 {
-	char *check = va_arg(ag, char *);
+	char *a;
 
-	if (check == NULL)
-		check = "(nil)";
-	printf("%s", check);
+	a = va_arg(lis, char *);
+
+	if (a == NULL)
+		a = "(nil)";
+	printf("%s", a);
 }
-
 /**
- * print_all - function to print data with specific format
- * @format: type format to print
+ * print_all - function to print a formatted data
+ *
+ * @format: format input
  */
 void print_all(const char * const format, ...)
 {
 	int i = 0;
-        int j = 0;
-        char *sep = "";
-        va_list ag;
+	int j = 0;
+	va_list ag;
+	char *sep = "";
 
 	form arr[] = {
-		{"c", c_f},
-		{"i", i_f},
-		{"f", f_f},
-		{"s", s_f},
-		{NULL, NULL}
+		{'c', c_f},
+		{'i', i_f},
+		{'f', f_f},
+		{'s', s_f}
 	};
 
 	va_start(ag, format);
-	while (format[i] && format)
+
+	while (format && format[i])
 	{
+		j = 0;
 		while (j < 4)
 		{
-			if (format[i] == arr[j].fmt[0])
+			if (format[i] == arr[j].fmt)
 			{
 				printf("%s", sep);
 				arr[j].f(ag);
