@@ -4,7 +4,6 @@
  * print_numbers- print a list of given numbers.
  * @n: number of numbers
  * @separator: separtor of numbers
- * 
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -13,13 +12,12 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int counter;
 
 	va_start(numbers, n);
-	for(counter = 0; counter < n; counter++)
+	for (counter = 0; counter < n; counter++)
 	{
 		printf("%d", va_arg(numbers, int));
-		if (counter < n - 1)
+		if (counter < n - 1 && separator)
 			printf("%s", separator);
-		else
-			printf("\n");
 	}
+	printf("\n");
 	va_end(numbers);
 }
