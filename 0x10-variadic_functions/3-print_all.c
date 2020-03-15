@@ -59,14 +59,14 @@ void print_all(const char * const format, ...)
 	va_list ag;
 
 	va_start(ag, format);
-	while (format[j] && format)
+	while (format[i] && format)
 	{
 		while (j < 4)
 		{
-			if (format[j] == arr[i].fmt[0])
+			if (format[i] == arr[j].fmt[0])
 			{
 				printf("%s", sep);
-				arr[i].f(ag);
+				arr[j].f(ag);
 				sep = ", ";
 			}
 			j++;
