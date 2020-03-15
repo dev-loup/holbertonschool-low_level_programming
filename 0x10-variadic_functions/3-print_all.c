@@ -1,48 +1,48 @@
 #include "variadic_functions.h"
 
 /**
- * c_f - func
- * @lis: va_list
+ * c_f - function to print chars
+ * @ag: va_list macro arguments
  */
-void c_f(va_list lis)
+void c_f(va_list ag)
 {
 	printf("%c", va_arg(lis, int));
 }
 
 /**
- * i_f - func
- * @lis: va_list
+ * i_f - function to print integers
+ * @ag: va_list macro arguments
  */
-void i_f(va_list lis)
+void i_f(va_list ag)
 {
 	printf("%i", va_arg(lis, int));
 }
 
 /**
- * f_f - func
- * @lis:  va_list
+ * f_f - function to print floats
+ * @ag:  va_list macro arguments
  */
-void f_f(va_list lis)
+void f_f(va_list ag)
 {
 	printf("%f", (float)va_arg(lis, double));
 }
 
 /**
- * s_f - func
- * @lis: va_list
+ * s_f - function to print strings
+ * @ag: va_list macro arguments
  */
-void s_f(va_list lis)
+void s_f(va_list ag)
 {
 	char *check = va_arg(lis, char *);
 
-	if (!*check)
+	if (check == NULL)
 		check = "(nil)";
 	printf("%s", check);
 }
 
 /**
- * print_all - func
- * @format: const
+ * print_all - function to print data with specific format
+ * @format: type format to print
  */
 void print_all(const char * const format, ...)
 {
