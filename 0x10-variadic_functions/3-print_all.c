@@ -24,7 +24,7 @@ void i_f(va_list lis)
  */
 void f_f(va_list lis)
 {
-	printf("%f", va_arg(lis, double));
+	printf("%f", (float)va_arg(lis, double));
 }
 
 /**
