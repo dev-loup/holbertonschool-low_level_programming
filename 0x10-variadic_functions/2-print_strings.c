@@ -17,7 +17,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (counter = 0; counter < n; counter++)
 	{
 		sequence = va_arg(string, char *);
-		if (*sequence == 00)
+		if (!sequence)
 			printf("(Nil)");
 		else
 			printf("%s", sequence);
