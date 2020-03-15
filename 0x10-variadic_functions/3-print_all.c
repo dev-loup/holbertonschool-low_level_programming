@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 	va_start(ag, format);
 	while (format[j] && format)
 	{
-		while (format[j])
+		while (j < 4)
 		{
 			if (format[j] == arr[i].fmt[0])
 			{
