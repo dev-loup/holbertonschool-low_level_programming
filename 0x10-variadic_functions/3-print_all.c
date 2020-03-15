@@ -6,7 +6,7 @@
  */
 void c_f(va_list ag)
 {
-	printf("%c", va_arg(lis, int));
+	printf("%c", va_arg(ag, int));
 }
 
 /**
@@ -15,7 +15,7 @@ void c_f(va_list ag)
  */
 void i_f(va_list ag)
 {
-	printf("%i", va_arg(lis, int));
+	printf("%i", va_arg(ag, int));
 }
 
 /**
@@ -24,7 +24,7 @@ void i_f(va_list ag)
  */
 void f_f(va_list ag)
 {
-	printf("%f", (float)va_arg(lis, double));
+	printf("%f", (float)va_arg(ag, double));
 }
 
 /**
@@ -33,7 +33,7 @@ void f_f(va_list ag)
  */
 void s_f(va_list ag)
 {
-	char *check = va_arg(lis, char *);
+	char *check = va_arg(ag, char *);
 
 	if (check == NULL)
 		check = "(nil)";
