@@ -18,11 +18,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		sequence = va_arg(string, char *);
 		if (!sequence)
-			printf("(Nil)");
+			printf("(nil)");
 		else
 			printf("%s", sequence);
-	if (counter < n - 1 && separator)
-		printf("%s", separator);
+		if (counter < n - 1 && separator)
+			printf("%s", separator);
 	}
 	printf("\n");
 	va_end(string);
