@@ -1,10 +1,12 @@
 #include "lists.h"
+#include <stdio.h>
+
 /**
  * print_list - print a full list.
- * @h; struct list to print
+ * @h: struct list to print
  * Return: number of nodes
  */
-size_t print_list(const list_t *h)
+int print_list(const list_t *h)
 {
 	int i = 0;
 
