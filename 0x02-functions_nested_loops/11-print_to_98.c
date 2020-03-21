@@ -24,7 +24,8 @@ void print_to_98(int n)
 			n = (n * -1);
 			if (n >= 100)
 				_putchar((n / 100) + '0');
-			_putchar(((n / 10) % 10) + '0');
+			if (n >= 10)
+				_putchar(((n / 10) % 10) + '0');
 			_putchar((n % 10) + '0');
 			n--;
 			n = (n * -1);
