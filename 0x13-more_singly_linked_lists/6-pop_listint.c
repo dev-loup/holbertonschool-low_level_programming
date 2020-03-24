@@ -10,7 +10,7 @@ int pop_listint(listint_t **head)
 	int cpy;
 	listint_t *eraser;
 
-	if (head != NULL)
+	if (*head != NULL)
 	{
 		cpy = (*head)->n;
 		eraser = *head;
