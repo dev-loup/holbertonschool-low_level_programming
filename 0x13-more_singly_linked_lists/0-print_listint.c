@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * print_listint- prints integer structed list
+ * print_listint - prints integer structed list
  * @h: struct containing the integer
  * prints all elements of a listint_t list
- * return: number of elements found
+ * Return: number of elements found
  */
 size_t print_listint(const listint_t *h)
 {
