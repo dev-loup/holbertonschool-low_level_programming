@@ -3,6 +3,7 @@
 /**
  * get_nodeint_at_index - returns a node value at index position
  * @head: struct containing the elements
+ * @index: desired node index
  * Return: pointer to indexed node
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -12,10 +13,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	while (cpy != NULL)
 	{
-	  if (counter == index)
-		  return (cpy);
-	  counter++;
-	  cpy = cpy->next;
+		if (counter == index)
+			return (cpy);
+		counter++;
+		cpy = cpy->next;
 	}
-		return (NULL);
+	return (NULL);
 }
