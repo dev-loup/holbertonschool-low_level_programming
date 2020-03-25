@@ -19,7 +19,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		free(cpy);
 		return (NULL);
 	}
-	if (*head == NULL && idx > 0)
+	if (iter == NULL && idx > 0)
 	{
 		free(cpy);
 		return (NULL);
@@ -32,6 +32,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	while (iter != NULL)
 	{
+		counter++;
 		if (counter == idx - 1)
 		{
 			cpy->n = n;
@@ -39,7 +40,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			iter->next = cpy;
 			return (cpy);
 		}
-		counter++;
 		iter = iter->next;
 	}
 	return (NULL);
