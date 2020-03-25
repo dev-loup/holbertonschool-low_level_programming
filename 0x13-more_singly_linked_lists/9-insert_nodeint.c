@@ -30,17 +30,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = cpy;
 		return (cpy);
 	}
-	while (iter != NULL)
+	while (counter < idx - 1 && iter)
 	{
-		counter++;
-		if (counter == idx - 1)
-		{
-			cpy->n = n;
-			cpy->next = iter->next;
-			iter->next = cpy;
-			return (cpy);
-		}
 		iter = iter->next;
+		counter++;
+	}
+
+	if (counter == idx - 1)
+	{
+		cpy->n = n;
+		cpy->next = iter->next;
+		iter->next = cpy;
+		return (cpy);
 	}
 	return (NULL);
 }
