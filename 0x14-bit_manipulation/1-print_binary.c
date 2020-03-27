@@ -16,8 +16,6 @@ void print_binary(unsigned long int n)
 		copy >>= 1;
 		print_binary(copy);
 		value = (n & 1);
-		_putchar(value + '0');
 	}
-	else
-		_putchar('0');
+	_putchar(value + '0');
 }
