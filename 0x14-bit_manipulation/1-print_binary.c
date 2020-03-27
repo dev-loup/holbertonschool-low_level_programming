@@ -11,11 +11,11 @@ void print_binary(unsigned long int n)
 	unsigned long int copy = n;
 	char value;
 
-	if (copy > 0)
+	if (copy > 1)
 	{
 		copy >>= 1;
 		print_binary(copy);
-		value = (n & 1);
 	}
+	value = (n & 1);
 	_putchar(value + '0');
 }
