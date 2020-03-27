@@ -18,4 +18,6 @@ void print_binary(unsigned long int n)
 		value = (n & 1);
 		_putchar(value + '0');
 	}
+	else
+		_putchar('0');
 }
