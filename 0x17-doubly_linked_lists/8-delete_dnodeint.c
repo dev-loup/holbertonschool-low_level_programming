@@ -23,7 +23,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	else
 		for (counter = 0; iter != NULL; counter++)
 		{
-			if (counter == index - 1)
+			if (counter == index)
 			{
 				delnode = iter;
 				iter->prev->next = iter->next;
