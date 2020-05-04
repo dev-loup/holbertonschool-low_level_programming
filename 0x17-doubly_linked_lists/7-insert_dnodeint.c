@@ -26,14 +26,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = node;
 		return (node);
 	}
-	for (counter = 0; counter < idx - 1; counter++)
+	for (counter = 0; counter != idx; counter++)
 	{
-		iter = iter->next;
-		if (iter == NULL && idx > counter)
-			return (free(node), NULL);
+		if (iter->next)
+			iter = iter->next;
+		else
+			return(free(node), NULL);
 	}
-	node->next = iter->next;
-	node->prev = iter;
-	iter->next = node;
+	node->prev = iter->prev;
+	node->next = iter;
+	iter->prev->next = node;
+	iter->prev = node;
 	return (node);
 }
