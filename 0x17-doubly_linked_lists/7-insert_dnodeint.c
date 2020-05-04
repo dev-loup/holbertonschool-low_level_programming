@@ -2,7 +2,7 @@
 
 /**
  * insert_dnodeint_at_index - inserts a new node
- * @head: struct containing the integer
+ * @h: struct containing the integer
  * @idx: desired index
  * @n: number to insert
  * Return: address to new node
@@ -31,11 +31,21 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		if (iter->next)
 			iter = iter->next;
 		else
-			return(free(node), NULL);
+			break;
 	}
-	node->prev = iter->prev;
-	node->next = iter;
-	iter->prev->next = node;
-	iter->prev = node;
+	if (idx == counter + 1)
+	{
+		node->prev = iter;
+		iter->next = node;
+	}
+	else if (idx == counter)
+	{
+		node->prev = iter->prev;
+		node->next = iter;
+		iter->prev->next = node;
+		iter->prev = node;
+	}
+	else
+		return (free(node), NULL);
 	return (node);
 }
