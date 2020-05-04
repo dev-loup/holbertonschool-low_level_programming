@@ -17,13 +17,15 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		if (counter == index)
 		{
-			if (node->prev && index != 0)
+			if (index != 0)
 			{
-				node->prev->next = node->next;
 				if (node->next)
+				{
+					node->prev->next = node->next;
 					node->next->prev = node->prev;
+				}
 				else
-					node->next->prev = NULL;
+					node->prev->next = NULL;
 			}
 			else if (node->next)
 			{
