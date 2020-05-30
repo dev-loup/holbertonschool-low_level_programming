@@ -1,5 +1,5 @@
 #include "hash_tables.h"
-#include <stdio.h>
+#include <string.h>
 
 /**
  * hash_table_set - Adds a value to a hash table
@@ -18,11 +18,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	runner = ht->array[val_index];
 	while (runner)
 	{
-		if (runner->value)
+		if (runner->key)
 		{
-			if (strcmp(runner->value, value) == 0)
+			if (strcmp(runner->key, key) == 0)
 			{
-				return (0);
+				free(runner->value);
+				runner->value = strdup(value);
+				return (1);
 			}
 		}
 		runner = runner->next;
