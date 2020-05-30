@@ -29,7 +29,7 @@ void hash_table_print(const hash_table_t *ht)
 				{
 					printf(", ");
 				}
-				printf("%s: %s", runner->key, runner->value);
+				printf("'%s': '%s'", runner->key, runner->value);
 				runner = runner->next;
 				comma = 1;
 			}
