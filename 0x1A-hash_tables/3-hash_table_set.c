@@ -14,6 +14,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int val_index;
 	hash_node_t *runner;
 
+	if (!ht || !key)
+	{
+		return (0);
+	}
 	val_index = key_index((const unsigned char *)key, ht->size);
 	runner = ht->array[val_index];
 	while (runner)
