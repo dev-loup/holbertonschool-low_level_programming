@@ -9,7 +9,7 @@ void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int index = 0;
 	hash_node_t *runner;
-    hash_node_t *temp;
+	hash_node_t *temp;
 
 	if (!ht)
 	{
@@ -24,12 +24,12 @@ void hash_table_delete(hash_table_t *ht)
 			{
 				temp = runner;
 				runner = runner->next;
-                free(temp->key);
-                free(temp->value);
-                free(temp);
+				free(temp->key);
+				free(temp->value);
+				free(temp);
 			}
 		}
 	}
-    free(ht->array);
-    free(ht);
+	free(ht->array);
+	free(ht);
 }
