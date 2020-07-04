@@ -1,0 +1,4 @@
+CC = gcc
+SRC = *.c
+all: $(SRC)
+	$(CC) $(SRC) m.h -o holberton
