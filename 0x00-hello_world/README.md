@@ -1,100 +1,66 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
 # Hello World project #cisfun
 
-Hello world project introduces you in the basis of C programming teaching you how to compile and what is main; Betty code style is introduced too and how to use it
+Hello world project introduces the basis of C programming:
 
-## Badges
+## Topics
+* how to compile
+* what is main
+* Betty code style
 
-After Hello world is done you will know how to start coding in a proper way
-
-## Recomendations
-
-* Projects were checked with `gcc 4.8.4` using `-Werror -Wall -Wextra -pedantic` even if it´s not necessary using the flags test your code is correctly written and there are no potencial mistakes
-* `Betty code style` is the standard code style, you can get [the betty checker here](https://github.com/holbertonschool/Betty/wiki) and documentation about using it in different text editors
-* All your files must end with a new line
-* while working in your own repo remember to write a `README.md`, more information about [writting README's is here](https://www.makeareadme.com/)
-* Using `global variables` is not allowed
-
-## Installation
-
-### Betty Code Style program
-To run the Betty linter just with command betty <filename>:
-
-*Go to the Betty repository
-* Clone the repo to your local machine
-* cd into the Betty directory
-* Install Betty with sudo ./install.sh
-* All is done, from your terminal you can use betty <file> for checking your code
-
-## Tasks
+## Content
 ### 0. Preprocessor
-Write a script that runs a C file through the preprocessor and save the result into another file.
-
-* The C file name will be saved in the variable `$CFILE`
-* The output should be saved in the file `c`
+Run a C file through the preprocessor and save the result into another file.
 
 ### 1. Compiler
  
-Write a script that compiles a C file but does not link.
-
-* The C file name will be saved in the variable `$CFILE`
-* The output file should be named the same as the C file, but with the extension .o instead of `.c`.
-- Example: if the C file is `main.c`, the output file should be `main.o`
+Compile a C file but does not link.
 
 ### 2. Assembler
 
-Write a script that generates the assembly code of a C code and save it in an output file.
-
-* The C file name will be saved in the variable `$CFILE`
-* The output file should be named the same as the C file, but with the extension `.s` instead of `.c`.
-* Example: if the C file is `main.c`, the output file should be `main.s`
+Generate the assembly code of a C code and save it in an output file.
 
 ### 3. Name
 
-Write a script that compiles a C file and creates an executable named `cisfun`.
+Compile a C file and creates an executable named `cisfun`.
 
-* The C file name will be saved in the variable `$CFILE`
+### 4. puts
 
-### 4. Hello, puts
+Print exactly `"Programming is like building a multilingual puzzle`, followed by a new line.
 
-Write a C program that prints exactly `"Programming is like building a multilingual puzzle`, followed by a new line.
+### 5. printf
 
-* Use the function `puts`
-* You are not allowed to use `printf`
-* Your program should end with the value `0`
+Print `exactly with proper grammar, but the outcome is a piece of art,`, followed by a new line.
 
-### 5. Hello, printf
+### 6. Size
 
-Write a C program that prints `exactly with proper grammar, but the outcome is a piece of art,`, followed by a new line.
-
-* Use the function `printf`
-* You are not allowed to use the function `puts`
-* Your program should return `0`
-* Your program should compile without warning when using the `-Wall` `gcc` option
-
-### 6. Size is not grandeur, and territory does not make a nation
-
-Write a C program that prints the size of various types on the computer it is compiled and run on.
-
-* You should produce the exact same output as in the example
-* Warnings are allowed
-* Your program should return `0`
-* You might have to install the package `libc6-dev-i386` on your Linux (Vagrant) to test the `-m32` `gcc` option
+Print the size of various types on the computer it is compiled and run on.
 
 ### 100. Intel (Advanced task)
 
-Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
+Generate the assembly code (Intel syntax) of a C code and save it in an output file.
 
-* The C file name will be saved in the variable `$CFILE`.
-* The output file should be named the same as the C file, but with the extension .s instead of `.c`.
-* Example: if the C file is `main.c`, the output file should be `main.s`
+### 101. Quote (Advanced Task)
 
-### 101. UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity (Advanced Task)
-
-Write a C program that prints exactly `and that piece of art is useful" - Dora Korpar, 2015-10-19`, followed by a new line, to the standard error.
-
-* You are not allowed to use any functions listed in the NAME section of the man (3) printf or man (3) `puts`
-* Your program should return 1
-* Your program should compile without any warnings when using the `-Wall` `gcc` option
+Print exactly `and that piece of art is useful" - Dora Korpar, 2015-10-19`, followed by a new line, to the standard error.
 
 ## License
 All exercises were designed by [holberton School](https://holbertonschool.com/)
+
+[contributors-shield]: https://img.shields.io/github/contributors/LoopingDiego/holbertonschool-low_level_programming?style=flat-square
+[contributors-url]: https://github.com/LoopingDiego/holbertonschool-low_level_programming/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/LoopingDiego/holbertonschool-low_level_programming.svg?style=flat-square
+[forks-url]: https://github.com/LoopingDiego/holbertonschool-low_level_programming/network/members
+[stars-shield]: https://img.shields.io/github/stars/LoopingDiego/holbertonschool-low_level_programming.svg?style=flat-square
+[stars-url]: https://github.com/LoopingDiego/holbertonschool-low_level_programming/stargazers
+[issues-shield]: https://img.shields.io/github/issues/LoopingDiego/holbertonschool-low_level_programming?style=flat-square
+[issues-url]: https://github.com/LoopingDiego/holbertonschool-low_level_programming/issues
+[license-shield]: https://img.shields.io/github/license/LoopingDiego/holbertonschool-low_level_programming?style=flat-square
+[license-url]: https://github.com/LoopingDiego/holbertonschool-low_level_programming/blob/master/LICENCE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/loopingdiego
