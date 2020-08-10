@@ -16,6 +16,8 @@ char *_strchr(char *s, char c)
 	{
 		if (s[index] == c)
 			return (&s[index]);
+		else if (s[index] == '\0')
+			break;
 	}
 	return (NULL);
 }
