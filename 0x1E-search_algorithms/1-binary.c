@@ -15,7 +15,7 @@ int binary_search(int *array, size_t size, int value)
 	size_t ind_start = 0;
 	size_t run = 0;
 
-	while (ind_end - ind_start)
+	while (ind_end >= ind_start)
 	{
 		printf("Searching in array: ");
 		for (run = ind_start; run <= ind_end; run++)
@@ -32,7 +32,6 @@ int binary_search(int *array, size_t size, int value)
 			ind_end = run - 1;
 		else
 			ind_start = run + 1;
-		sleep(1);
 	}
 	return (-1);
 }
